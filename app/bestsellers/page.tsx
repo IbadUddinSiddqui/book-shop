@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from '../components/Header';
+
 
 const bestsellers = [
   {
@@ -80,7 +80,7 @@ const bestsellers = [
 const BestsellersPage = () => {
   return (
     <>
-    <Header/>
+  
     <div className="bg-gray-900 py-16 px-4 ">
   <h1 className="text-4xl font-bold text-center text-yellow-500 mb-12">Bestsellers</h1>
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-lg mx-auto ">
