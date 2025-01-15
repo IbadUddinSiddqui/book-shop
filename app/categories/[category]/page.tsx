@@ -336,7 +336,7 @@ const CategoryPage = () => {
             <p className="text-gray-500 text-sm mt-3 line-clamp-3">{book.description}</p>
             <p className="text-green-600 font-bold text-lg mt-4">${book.price}</p>
             <Link
-              href={`/books/${book.title.replace(/\s+/g, '-').toLowerCase()}`}
+              href={`/categories/${category}/${book.title.replace(/\s+/g, '-').toLowerCase()}`}
               className="mt-auto pt-3 text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300"
             >
               View Details
