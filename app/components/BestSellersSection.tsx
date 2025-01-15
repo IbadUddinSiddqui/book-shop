@@ -2,43 +2,55 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const books = [
   {
-    id: 1,
-    title: "The Art of Coding",
-    author: "John Doe",
-    cover: "https://picsum.photos/400/600?random=1",
-    price: "24.99",
+    id:1,
+    title: 'The Guns of August',
+    author: 'Barbara W. Tuchman',
+    cover: 'https://covers.openlibrary.org/b/isbn/034538623X-L.jpg',
+    price: `30.00`,
+    description: 'A historical account of the events leading up to World War I.',
+    category:`history`,
   },
   {
-    id: 2,
-    title: "Design Patterns in JavaScript",
-    author: "Jane Smith",
-    cover: "https://picsum.photos/400/600?random=2",
-    price: "29.99",
+    id:2,
+    title: 'Genghis Khan and the Making of the Modern World',
+    author: 'Jack Weatherford',
+    cover: 'https://covers.openlibrary.org/b/isbn/0609809644-L.jpg',
+    price: "11.50",
+    description: 'The story of Genghis Khan’s empire and its impact on the modern world.',
+    category:`history`,
   },
   {
-    id: 3,
-    title: "Advanced React Techniques",
-    author: "Alice Johnson",
-    cover: "https://picsum.photos/400/600?random=3",
-    price: "34.99",
+    id:3,
+    title: 'Einstein His Life and Universe',
+    author: 'Walter Isaacson',
+    price: "13.99",
+    description: 'The biography of physicist Albert Einstein and his contributions to science.',
+    cover: 'https://covers.openlibrary.org/b/isbn/0743264738-L.jpg',
+    category:`biography`,
   },
   {
-    id: 4,
-    title: "CSS for Pros",
-    author: "Mark Thompson",
-    cover: "https://picsum.photos/400/600?random=4",
-    price: "19.99",
+    id:4,
+    title: 'A Game of Thrones',
+    author: 'George R.R. Martin',
+    price: "10.99",
+    description: 'Noble families vie for control of the Iron Throne as winter looms and dark forces gather.',
+    cover: 'https://covers.openlibrary.org/b/isbn/0553103547-L.jpg',
+    category:`fantasy`,
   },
   {
-    id: 5,
-    title: "Python for Data Science",
-    author: "Emily White",
-    cover: "https://picsum.photos/400/600?random=5",
-    price: "39.99",
+    id:5,
+    title: 'Good Omens',
+    author: 'Neil Gaiman & Terry Pratchett',
+    price:" 8.99",
+    description: 'An angel and a demon team up to prevent the apocalypse in this humorous fantasy tale.',
+    cover: 'https://covers.openlibrary.org/b/isbn/0060853980-L.jpg',
+    category:`history`,
   },
+  
 ];
 
 const BestSellersSection = () => {
@@ -106,9 +118,14 @@ const BestSellersSection = () => {
             <p className="text-yellow-500 font-bold text-lg">
               ${books[currentIndex].price}
             </p>
-          </div>
-        </div>
+            <Link href={`/categories/${books[currentIndex].category}/${books[currentIndex].title.replace(/\s+/g, '-').toLowerCase()}`}>
+            <p className="text-blue-500 mt-4 inline-block hover:underline">Buy Here</p>
+          </Link>
+          </div> 
 
+          
+        </div>
+        
         {/* Next Slide */}
         <div className="relative w-60 h-80 mx-4 opacity-50 scale-90 transition-transform duration-300">
           <Image
@@ -118,6 +135,8 @@ const BestSellersSection = () => {
             height={600}
             className="rounded-lg object-cover w-full h-full"
           />
+
+
         </div>
 
         {/* Navigation Buttons */}

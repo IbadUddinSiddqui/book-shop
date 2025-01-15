@@ -213,7 +213,7 @@ export const Data : Record<string, Book[]> = {
         cover: 'https://covers.openlibrary.org/b/isbn/0553296981-L.jpg'
       },
       {
-        title: 'Einstein: His Life and Universe',
+        title: 'Einstein His Life and Universe',
         author: 'Walter Isaacson',
         price: 13.99,
         description: 'The biography of physicist Albert Einstein and his contributions to science.',

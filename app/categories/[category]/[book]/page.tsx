@@ -31,7 +31,7 @@ const BookPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4">
+    <div className="min-h-screen mt-12 bg-gray-100 py-8 px-4">
       <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Book Cover */}
